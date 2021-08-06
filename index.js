@@ -75,4 +75,10 @@ function task11(input='') {
   return false;
 }
 
-console.log(task11(12321));
+// 12. Create a function that takes voltage and current and returns the calculated power.
+function task12(voltage=0, current=0) {
+  if(isNaN(voltage) || isNaN(current)) return false;
+  return voltage*current;
+}
+
+console.log(task12());
