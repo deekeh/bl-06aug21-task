@@ -69,4 +69,10 @@ function task10(n=10) {
   return true;
 }
 
-console.log(task10());
+// 11. JAVASCRIPT PALINDROME CHECKER
+function task11(input='') {
+  if (input.toString().split("").reverse().join("") === input.toString()) return true;
+  return false;
+}
+
+console.log(task11(12321));
