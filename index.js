@@ -48,4 +48,9 @@ function task7(numberArray = [1,2,3,4]) {
   return numberArray.reduce((a=0, b) => a+b);
 }
 
-console.log(task7());
+// 8. Create a function that receives an array of numbers and returns an array containing only the positive numbers
+function task8(numberArray = [-1,-2,3,4]) {
+  return numberArray.filter(n => n>0);
+}
+
+console.log(task8());
