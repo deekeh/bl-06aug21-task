@@ -75,4 +75,4 @@ function task11(input='') {
   return false;
 }
 
-console.log(task11(12321));
+console.log(task11());
