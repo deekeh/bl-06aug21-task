@@ -30,4 +30,11 @@ function task4(tableNumber=7) {
   return tableString;
 }
 
-console.log(task4());
+// 5. Calculate 10!
+function task5(factorialNumber = 10) {
+  let factorial = 1;
+  for (let i=1; i<=factorialNumber; i++) factorial *= i;
+  return factorial;
+}
+
+console.log(task5());
