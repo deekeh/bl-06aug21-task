@@ -15,4 +15,12 @@ function task2(start=1, end=10) {
   return numbers.join(", ");
 }
 
-console.log(task2());
+// 3. Print the odd numbers less than 100
+function task3(end=100) {
+  let oddNumbers = [];
+  for (let i=0; i<end; i++)
+    if (i%2 != 0) oddNumbers.push(i);
+    return oddNumbers.join(", ");
+}
+
+console.log(task3());
