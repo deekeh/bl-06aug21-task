@@ -43,4 +43,9 @@ function task6(fahrenheit = 32) {
   return (fahrenheit - 32) * (5/9);
 }
 
-console.log(task6());
+// 7. Calculate the sum of numbers in an array of numbers
+function task7(numberArray = [1,2,3,4]) {
+  return numberArray.reduce((a=0, b) => a+b);
+}
+
+console.log(task7());
