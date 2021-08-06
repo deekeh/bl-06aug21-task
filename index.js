@@ -37,4 +37,10 @@ function task5(factorialNumber = 10) {
   return factorial;
 }
 
-console.log(task5());
+// 6. Create a function that will convert from Celsius to Fahrenheit
+function task6(fahrenheit = 32) {
+  if (isNaN(fahrenheit)) return false;
+  return (fahrenheit - 32) * (5/9);
+}
+
+console.log(task6());
