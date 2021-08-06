@@ -53,4 +53,14 @@ function task8(numberArray = [-1,-2,3,4]) {
   return numberArray.filter(n => n>0);
 }
 
-console.log(task8());
+// 9. Find the maximum number in an array of numbers
+function task9(numbers=[4,5,3,6]) {
+  let maxNumber = numbers[0];
+  for (let i=0; i<numbers.length; i++) {
+    if(isNaN(numbers[i])) return false;
+    if (numbers[i] > maxNumber) maxNumber = numbers[i];
+  }
+  return maxNumber;
+}
+
+console.log(task9());
