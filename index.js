@@ -63,4 +63,10 @@ function task9(numbers=[4,5,3,6]) {
   return maxNumber;
 }
 
-console.log(task9());
+// 10. Create a function that will return a Boolean specifying if a number is prime
+function task10(n=10) {
+  for (let i=2; i<n/2; i++) if (n%i==0) return false;
+  return true;
+}
+
+console.log(task10());
