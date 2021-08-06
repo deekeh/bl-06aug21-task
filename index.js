@@ -23,4 +23,11 @@ function task3(end=100) {
     return oddNumbers.join(", ");
 }
 
-console.log(task3());
+// 4. Print the multiplication table with 7
+function task4(tableNumber=7) {
+  let tableString = '';
+  for (let i=1; i<=10; i++) tableString += `${tableNumber} * ${i} = ${tableNumber*i}\n`;
+  return tableString;
+}
+
+console.log(task4());
