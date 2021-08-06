@@ -81,4 +81,14 @@ function task12(voltage=0, current=0) {
   return voltage*current;
 }
 
-console.log(task12());
+// 13. A farmer is asking you to tell him how many legs can be counted among all his animals. The farmer breeds three species:
+// chickens = 2 legs
+// cows = 4 legs
+// pigs = 4 legs
+// The farmer has counted his animals and he gives you a subtotal for each species. You have to implement a function that returns the total number of legs of all the animals
+function task13(chicken=0, cow=0, pig=0) {
+  if (isNaN(chicken) || isNaN(cow) || isNaN(pig)) return false;
+  return (chicken*2) + (cow*4) + (pig*4);
+}
+
+console.log(task13());
