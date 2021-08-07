@@ -38,9 +38,9 @@ function task5(factorialNumber = 10) {
 }
 
 // 6. Create a function that will convert from Celsius to Fahrenheit
-function task6(fahrenheit = 32) {
-  if (isNaN(fahrenheit)) return false;
-  return (fahrenheit - 32) * (5/9);
+function task6(celcius = 0) {
+  if (isNaN(celcius)) return false;
+  return (celcius * (9/5)) + (32);
 }
 
 // 7. Calculate the sum of numbers in an array of numbers
@@ -91,4 +91,4 @@ function task13(chicken=0, cow=0, pig=0) {
   return (chicken*2) + (cow*4) + (pig*4);
 }
 
-console.log(task13());
+console.log(task6());
