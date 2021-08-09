@@ -120,4 +120,13 @@ function task16(input = 10) {
   return pairs;
 }
 
-console.log(task16());
+// 17. How do you find duplicate numbers in an array if it contains multiple duplicates?
+function task17(input = [1,1,1,4,6,7,5,33,3,55,55,3]) {
+  let filtered = [];
+  input.forEach(n => {
+    if (!filtered.includes(n)) filtered.push(n)
+  });
+  return filtered;
+}
+
+console.log(task17());
