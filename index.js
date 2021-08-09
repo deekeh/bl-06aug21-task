@@ -91,4 +91,20 @@ function task13(chicken=0, cow=0, pig=0) {
   return (chicken*2) + (cow*4) + (pig*4);
 }
 
-console.log(task6());
+// Write some code to put these numbers in order
+function numberSort(numbers = [1, 12, 2 ,23,77,7,33,5,99,234,]) {
+  return numbers.sort((a,b) => a-b);
+}
+
+// check if element is present
+function arraySearch(searchTerm = 'human') {
+  var animals = ['dog', 'cat','cow', 'bat', 'human'];
+  if (animals.indexOf(searchTerm) === -1) return `${searchTerm} not found`;
+  return `${searchTerm} found at index ${animals.indexOf(searchTerm)}`;
+}
+
+function task14(incompleteArray = [10, 5, 20, 15, 90, 95, 99]) {
+  return [...Array(101).keys()].slice(1).filter(n => !incompleteArray.includes(n));
+}
+
+console.log(task14());
