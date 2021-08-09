@@ -113,4 +113,11 @@ function task15(input=[1,3,5,2,4,8,7,6]) {
   return [input.reduce((a=input[0], b) => (b<a ? b : a)), input.reduce((a=input[0], b) => (b>a ? b : a))]
 }
 
-console.log(task15());
+// 16. How do you find all pairs of an integer array whose sum is equal to a given number?
+function task16(input = 10) {
+  let pairs = [];
+  for (let i=0; i<=input/2; i++) pairs.push([i, input -i]);
+  return pairs;
+}
+
+console.log(task16());
