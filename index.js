@@ -129,4 +129,12 @@ function task17(input = [1,1,1,4,6,7,5,33,3,55,55,3]) {
   return filtered;
 }
 
-console.log(task17());
+// 18. Find the Union and Intersection of the two sorted arrays
+function task18(a1 = [1,2,3,4,5,6], a2 = [3,4,5,6,7,8,9]) {
+  return {
+    union: task17([...a1, ...a2]),
+    intersection: a1.filter(n => a2.includes(n)),
+  };
+}
+
+console.log(task18());
