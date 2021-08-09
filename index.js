@@ -103,8 +103,14 @@ function arraySearch(searchTerm = 'human') {
   return `${searchTerm} found at index ${animals.indexOf(searchTerm)}`;
 }
 
+// 14. How do you find the missing number in a given integer array of 1 to 100?
 function task14(incompleteArray = [10, 5, 20, 15, 90, 95, 99]) {
   return [...Array(101).keys()].slice(1).filter(n => !incompleteArray.includes(n));
 }
 
-console.log(task14());
+// 15. How do you find the largest and smallest number in an unsorted integer array?
+function task15(input=[1,3,5,2,4,8,7,6]) {
+  return [input.reduce((a=input[0], b) => (b<a ? b : a)), input.reduce((a=input[0], b) => (b>a ? b : a))]
+}
+
+console.log(task15());
