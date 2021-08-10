@@ -137,4 +137,25 @@ function task18(a1 = [1,2,3,4,5,6], a2 = [3,4,5,6,7,8,9]) {
   };
 }
 
-console.log(task18());
+// 18. Write a program in the following steps
+// a. Generates 10 Random 3 Digit number.
+// b. Store this random numbers into a array.
+// c. Then find the 2nd largest and the 2nd smallest element without sorting the array.
+function task19() {
+  // generate 10 random three-digit numbers
+  const randomNumbers = [];
+  for(let i=0; i<10; i++) randomNumbers.push([...Array(1000).keys()].slice(99)[Math.floor(Math.random() * 899)]);
+
+  // extract smallest and largest number
+  const largest = randomNumbers.reduce((a,b) => (a<b) ? a : b);
+  const smallest = randomNumbers.reduce((a,b) => (a>b) ? a : b);
+
+  // return original array, second-smallest and second-largest numbers
+  return {
+    randomNumbers,
+    secondSmallest: randomNumbers.filter(n => !(n===smallest || n===largest)).reduce((a,b) => (a<b) ? a : b),
+    secondLargest: randomNumbers.filter(n => !(n===smallest || n===largest)).reduce((a,b) => (a>b) ? a : b),
+  };
+}
+
+console.log(task19());
