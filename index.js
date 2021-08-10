@@ -259,12 +259,27 @@ function task24() {
     }
   });
 
-  // return dice.keys();
-
   return {
     dice,
     data,
   };
 }
 
-console.log(task24());
+// 25. Write a Program to generate a birth month of 50 individuals between the year 92 & 93. Find all the individuals having birthdays in the same month. Store it to finally print.
+function task25() {
+  const persons = new Map();
+  // generate 50 random birth months
+  const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+  for(let i=1; i<=50; i++) persons.set(`Person${i}`, months[Math.floor(Math.random()*12)]);
+  
+  // separate persons according to months
+  const  birthdays = new Map();
+  months.forEach(month => birthdays.set(month, []));
+  persons.forEach((value, key) => birthdays.set(value, [...birthdays.get(value), key]));
+  
+  return birthdays;
+}
+
+console.log(task25());
+
+// task25().forEach((value, key) => console.log(`${key}: ${value}`));
