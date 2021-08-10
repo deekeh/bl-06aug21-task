@@ -207,4 +207,64 @@ function task23() {
   return [...Array(101).keys()].filter(n => (n!==0 && n%11===0 || n===100));
 }
 
-console.log(task23());
+// 24. Write a program in the following steps
+// a. Roll a die and find the number between 1 to 6
+// b. Repeat the Die roll and find the result each time
+// c. Store the result in a dictionary
+// d. Repeat till any one of the number has reached 10 times
+// e. Find the number that reached maximum times and the one that was for
+// minimum times
+function task24() {
+  const dice = new Map();
+  dice.set(1, 0);
+  dice.set(2, 0);
+  dice.set(3, 0);
+  dice.set(4, 0);
+  dice.set(5, 0);
+  dice.set(6, 0);
+  
+  while (true) {
+    const dieValue = Math.floor(Math.random() * 6) + 1;
+    
+    // roll die till some value hits ten times
+    dice.set(dieValue, dice.get(dieValue) + 1);
+    if (dice.get(dieValue)===10) break;
+
+  }
+  
+  const data = {
+    min: {
+      face: 1,
+      numbers: dice.get(1),
+    },
+    max: {
+      face: 1,
+      numbers: dice.get(1),
+    },
+  };
+  
+  // get the face with minimum times
+  dice.forEach((value, key) => {
+    if (value<data.min.numbers) {
+      data.min.face = key;
+      data.min.numbers = value;
+    }
+  });
+  
+  // get the face with maximum times
+  dice.forEach((value, key) => {
+    if (value>data.max.numbers) {
+      data.max.face = key;
+      data.max.numbers = value;
+    }
+  });
+
+  // return dice.keys();
+
+  return {
+    dice,
+    data,
+  };
+}
+
+console.log(task24());
