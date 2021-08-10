@@ -170,4 +170,11 @@ function task20() {
   }
 }
 
-console.log(task20());
+// 21. Extend the Prime Factorization Program to store all the Prime Factors of a number n into an array and finally display the output
+function task21(n=12) {
+  const primeFactors = new Array();
+  for (let i=1; i<=n/2; i++) if (n%i===0) primeFactors.push(i);
+  return primeFactors;
+}
+
+console.log(task21());
