@@ -177,4 +177,29 @@ function task21(n=12) {
   return primeFactors;
 }
 
-console.log(task21());
+// 22. Write a Program to show Sum of three Integer adds to ZERO
+function task22(arr=[3,-1,-7,-4,-6,9,10]) {
+  const answer = {};
+  arr.forEach((n1,i1) => {
+    if (!answer.found)
+    arr.forEach((n2,i2) => {
+      if (!answer.found)
+      arr.forEach((n3,i3) => {
+        if (
+          i1!==i2 &&
+          i2!==i3 &&
+          i1!==i3 &&
+          n1+n2+n3===0 &&
+          !answer.found
+        ) {
+          answer.found = true;
+          answer.group = [n1,n2,n3];
+        }
+      });
+    });
+  });
+  if(answer.found) return answer.group;
+  return false;
+}
+
+console.log(task22());
