@@ -202,4 +202,9 @@ function task22(arr=[3,-1,-7,-4,-6,9,10]) {
   return false;
 }
 
-console.log(task22());
+// 23. Take a range from 0 – 100, find the digits that are repeated twice like 33, 77,etc and store them in an array
+function task23() {
+  return [...Array(101).keys()].filter(n => (n!==0 && n%11===0 || n===100));
+}
+
+console.log(task23());
