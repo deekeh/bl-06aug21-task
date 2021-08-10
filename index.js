@@ -158,4 +158,16 @@ function task19() {
   };
 }
 
-console.log(task19());
+// 20. Extend the above program to sort the array and then find the 2nd largest and the 2nd smallest element
+function task20() {
+  const randomNumbers = [];
+  for(let i=0; i<10; i++) randomNumbers.push([...Array(1000).keys()].slice(99)[Math.floor(Math.random() * 899)]);
+
+  return {
+    randomNumbers,
+    secondSmallest: randomNumbers.sort((a,b) => a-b)[0],
+    secondLargest: randomNumbers.sort((a,b) => b-a)[0],
+  }
+}
+
+console.log(task20());
